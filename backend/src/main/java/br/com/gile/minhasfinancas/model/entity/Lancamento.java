@@ -2,8 +2,10 @@ package br.com.gile.minhasfinancas.model.entity;
 
 import br.com.gile.minhasfinancas.model.enums.StatusLancamento;
 import br.com.gile.minhasfinancas.model.enums.TipoLancamento;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import javax.persistence.*;
@@ -14,6 +16,8 @@ import java.time.LocalDate;
 @Table(name = "lancamento", schema = "financas")
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Lancamento {
 
     @Column(name = "id")
